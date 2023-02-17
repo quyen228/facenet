@@ -27,6 +27,7 @@ from __future__ import print_function
 
 from scipy import misc
 import sys
+sys.path.append("/content/facenet/src")
 import os
 import argparse
 import tensorflow as tf
@@ -49,7 +50,7 @@ def main(args):
     print('Creating networks and loading parameters')
     
     with tf.Graph().as_default():
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=args.gpu_memory_fraction)
+        gpu_options = tf.compat.v1.GPUOptions(per_process_gpu_memory_fraction=args.gpu_memory_fraction)
         sess = tf.Session(config=tf.ConfigProto(gpu_options=gpu_options, log_device_placement=False))
         with sess.as_default():
             pnet, rnet, onet = align.detect_face.create_mtcnn(sess, None)

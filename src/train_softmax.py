@@ -30,6 +30,7 @@ from datetime import datetime
 import os.path
 import time
 import sys
+sys.path.append("/content/facenet/src")
 import random
 import tensorflow as tf
 import numpy as np

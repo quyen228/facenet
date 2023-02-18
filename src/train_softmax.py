@@ -39,7 +39,8 @@ import facenet
 import lfw
 import h5py
 import math
-import tensorflow.contrib.slim as slim
+import tensorflow.compat.v1 as tf
+import tf.contrib.slim as slim
 from tensorflow.python.ops import data_flow_ops
 from tensorflow.python.framework import ops
 from tensorflow.python.ops import array_ops

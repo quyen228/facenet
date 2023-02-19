@@ -32,7 +32,7 @@ import time
 import sys
 sys.path.append("/content/facenet/src")
 import random
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 import numpy as np
 import importlib
 import argparse
